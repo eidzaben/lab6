@@ -17,10 +17,12 @@ public class Circle extends Ellipse
 	 * @param id The shape's name identifier, as defined in Shape.java.
 	 * @param radius The radius of the circle.
 	 */
+	private double radius;
 	public Circle(String id, double radius)
 	{
 		// TODO: complete this...
 		super(id, radius, radius);
+		this.radius = radius;
 		
 	}
 
@@ -42,7 +44,7 @@ public class Circle extends Ellipse
 	@Override
 	public double getPerimeter()
 	{
-		// TODO: complete this...
+		return Math.PI * 2 * radius;
 	}
 
 	/**
@@ -53,6 +55,6 @@ public class Circle extends Ellipse
 	@Override
 	public String getShapeType()
 	{
-		// TODO: complete this...
+		return "Circle";
 	}
 }
