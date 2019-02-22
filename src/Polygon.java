@@ -33,5 +33,11 @@ public abstract class Polygon extends Shape
 	public double getPerimeter()
     {
     	// TODO: complete this...
+    	if (getShapeType().equals("EquilateralTriangle")) {
+    		sideLengths.add(sideLength);
+    	} else {
+    		sideLengths.add(topBase);
+    	}
+    	
     }
 }
