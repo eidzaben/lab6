@@ -45,6 +45,7 @@ public class ShapeSorter
 	public void sortShapes()
 	{
 		// TODO: complete this...
+		Collections.sort(shapes);
 	}
 
 	/**
@@ -58,6 +59,9 @@ public class ShapeSorter
 	public void sortShapes(Comparator<Shape> comparator)
 	{
 		// TODO: complete this...
+		Collections.sort(shapes, new ShapeAreaComparator());
+		Collections.sort(shape, new ShapePerimeterComparator());
+		
 	}
 
 	/**
@@ -70,6 +74,7 @@ public class ShapeSorter
 	public String toString()
 	{
 		// TODO: complete this...
+		String.format(" ", args)
 	}
 
 }
