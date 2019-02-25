@@ -60,7 +60,7 @@ public class ShapeSorter
 	{
 		// TODO: complete this...
 		Collections.sort(shapes, new ShapeAreaComparator());
-		Collections.sort(shape, new ShapePerimeterComparator());
+		Collections.sort(shapes, new ShapePerimeterComparator());
 		
 	}
 
