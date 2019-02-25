@@ -53,5 +53,11 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	public boolean equals(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
-	}
+		int a = compare(s1, s2);
+		if (a == 0) {
+			return true;
+		} else {
+			return false;
+		}
+ 	}
 }
