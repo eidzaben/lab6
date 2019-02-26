@@ -22,6 +22,7 @@ public abstract class Polygon extends Shape
     {
         super(id);
         sideLengths = new ArrayList<Double>();
+       
     }
 
     /**
@@ -33,11 +34,11 @@ public abstract class Polygon extends Shape
 	public double getPerimeter()
     {
     	// TODO: complete this...
-    	if (getShapeType().equals("EquilateralTriangle")) {
-    		sideLengths.add(sideLength);
-    	} else {
-    		sideLengths.add(topBase);
+    	double perimeter = 0;
+    	for (int i = 0; i < sideLengths.size(); i++) {
+    		perimeter += sideLengths.get(i);
     	}
+    	return perimeter;
     	
     }
 }
