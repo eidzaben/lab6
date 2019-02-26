@@ -25,7 +25,7 @@ public class Driver
 		Shape s4 = new Rectangle("D", 16.0, 1.0);
 		Shape s5 = new Rectangle("A", 8.0, 2.0);
 
-		// Add all to sorter:
+		// Add all to sorter: 
 		sorter.addShape(s1);
 		sorter.addShape(s2);
 		sorter.addShape(s4);

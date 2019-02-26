@@ -27,7 +27,7 @@ public class Trapezoid extends Polygon
      */
 	public Trapezoid(String id, double leftSide, double rightSide, double topBase, double bottomBase)
 	{
-		
+		 
 		super(id);
 		this.leftSide = leftSide;
 		this.rightSide = rightSide;

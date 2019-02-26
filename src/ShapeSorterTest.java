@@ -14,7 +14,7 @@ public class ShapeSorterTest
 {
 	/**
 	 * Test that shapes are added correctly.
-	 */
+	 */ 
 	@Test
 	public void AddShapeTest()
 	{
@@ -27,7 +27,7 @@ public class ShapeSorterTest
 
 		sorter.addShape(a);
 		sorter.addShape(b);
-		sorter.addShape(c);
+		sorter.addShape(c); 
 		sorter.addShape(d);
 
 		Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(0), a);
@@ -42,7 +42,24 @@ public class ShapeSorterTest
 	@Test
 	public void SortShapesDefaultTest()
 	{
-		// TODO: complete this...
+
+	    ShapeSorter sort = new ShapeSorter();
+	    
+	    Shape a = new Rectangle("test", 3, 3);
+        Shape b = new EquilateralTriangle("test2", 4);
+        Shape c = new Square("test3", 3);
+        Shape d = new Circle("test4", 1.5);
+        
+        sort.addShape(a);
+        sort.addShape(b);
+        sort.addShape(c); 
+        sort.addShape(d);
+        
+        Assert.assertEquals("Checking the order",a, sort.shapes.get(0));
+        Assert.assertEquals("Checking the order",b, sort.shapes.get(1));
+        Assert.assertEquals("Checking the order",c, sort.shapes.get(2));
+        Assert.assertEquals("Checking the order",d, sort.shapes.get(3));
+
 	}
 
 	/**
@@ -52,6 +69,21 @@ public class ShapeSorterTest
 	public void SortShapesAreaTest()
 	{
 		// TODO: complete this...
+	    ShapeSorter sort = new ShapeSorter();
+        
+        Shape a = new Rectangle("test", 3, 3);
+        Shape b = new EquilateralTriangle("test2", 4);
+        Shape c = new Square("test3", 3);
+        Shape d = new Circle("test4", 1.5);
+        
+        sort.addShape(a);
+        sort.addShape(b);
+        sort.addShape(c); 
+        sort.addShape(d);
+        
+        Assert.assertEquals("Checking order by area", actual);
+        
+	    
 	}
 
 	/**
@@ -61,6 +93,7 @@ public class ShapeSorterTest
 	public void SortShapesPerimeterTest()
 	{
 		// TODO: complete this...
+		
 	}
 
 	/**

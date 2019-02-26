@@ -95,7 +95,7 @@ public abstract class Shape implements Comparable<Shape>
 	@Override
 	public int compareTo(Shape s)
 	{
-		
+		 
 		if(this.getArea() > s.getArea()) {
 			return 1;
 		} else if (this.getArea() < s.getArea()) {
@@ -141,8 +141,9 @@ public abstract class Shape implements Comparable<Shape>
 	 */
 	@Override
 	public String toString()
-	{
-		// TODO: complete this...
-		return 
+	{ 
+		
+		
+		return String.format("%s:\t ID = %s\t area = %.3f\t perimeter = %.3f", getShapeType(), getId(), getArea(), getPerimeter());
 	}
 }

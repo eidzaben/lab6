@@ -19,7 +19,7 @@ public class ShapePerimeterComparator implements Comparator<Shape>
      *
      * This method should define an ordering of shapes that would sort shapes in order of increasing perimeter,
      * disregarding the area of the shapes.
-     *
+     * 
      * Look to the documentation in Shape's compareTo to better understand how this should work.
      *
      * @param s1 The first shape to be compared.
@@ -53,8 +53,8 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	public boolean equals(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
-		int a = compare(s1, s2);
-		if (a == 0) {
+		//int a = compare(s1, s2);
+		if (compare(s1, s2) == 0) {
 			return true;
 		} else {
 			return false;

@@ -50,7 +50,7 @@ public class ShapeSorter
 
 	/**
 	 * Sort the list of shapes by some custom ordering (a class implementing Comparator<Shape>).
-	 *
+	 * 
 	 * It is recommended that you use Collections.sort().
 	 *
 	 * @param comparator The shape comparing object that defines the ordering of the shapes (how to
@@ -59,8 +59,8 @@ public class ShapeSorter
 	public void sortShapes(Comparator<Shape> comparator)
 	{
 		// TODO: complete this...
-		Collections.sort(shapes, new ShapeAreaComparator());
-		Collections.sort(shapes, new ShapePerimeterComparator());
+		Collections.sort(shapes, comparator);
+	
 		
 	}
 
@@ -74,7 +74,12 @@ public class ShapeSorter
 	public String toString()
 	{
 		// TODO: complete this...
-		String.format(" ", args)
+		//String.format(" ", args)
+		String a = "";
+		for (int i = 0; i < shapes.size(); i++) {
+			a+= shapes.get(i) + " ";
+		}
+		return a;
 	}
 
 }
