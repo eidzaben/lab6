@@ -17,9 +17,10 @@ public abstract class Shape implements Comparable<Shape>
      * Shape constructor. Sets the name id.
      *
      * @param id The created shape's name id.
-     */
+     */ 
     public Shape(String id)
     {
+        //parent class
         this.id = id;
     }
 
@@ -95,7 +96,7 @@ public abstract class Shape implements Comparable<Shape>
 	@Override
 	public int compareTo(Shape s)
 	{
-		 
+		 //determines what the appropriate return value should be
 		if(this.getArea() > s.getArea()) {
 			return 1;
 		} else if (this.getArea() < s.getArea()) {
@@ -110,7 +111,7 @@ public abstract class Shape implements Comparable<Shape>
 			}
 		}
 	}
-
+ 
 	/**
 	 * Gets the shape's id.
 	 *
@@ -118,6 +119,7 @@ public abstract class Shape implements Comparable<Shape>
 	 */
 	public String getId()
 	{
+	    //returns the id
 	    return id;
 	}
 
@@ -142,8 +144,8 @@ public abstract class Shape implements Comparable<Shape>
 	@Override
 	public String toString()
 	{ 
-		
-		
+		 
+		//formats and returns the proper toString
 		return String.format("%s:\t ID = %s\t area = %.3f\t perimeter = %.3f", getShapeType(), getId(), getArea(), getPerimeter());
 	}
 }

@@ -10,7 +10,7 @@ import java.util.Comparator;
  * will sort the list of shapes in ascending order of area. The perimeter is ignored.
  *
  * @author Stephen
- * @version 2019-02-17
+ * @version 2019-02-17 
  */
 public class ShapeAreaComparator implements Comparator<Shape>
 {
@@ -32,8 +32,8 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	@Override
 	public int compare(Shape s1, Shape s2)
 	{
-		// TODO: complete this...
-		if (s1.getArea()<s2.getArea()) {
+		//Determines what should be returned
+	    if (s1.getArea()<s2.getArea()) {
 			return -1;
 		} else if (s1.getArea()>s2.getArea()) {
 			return 1;
@@ -43,7 +43,7 @@ public class ShapeAreaComparator implements Comparator<Shape>
 		
 	}
 
-	/**
+	/** 
 	 * Compares two shapes to determine if they are effectively equal (same area). You should use the compare()
 	 * method of this class to determine this.
 	 *
@@ -53,7 +53,7 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	 */
 	public boolean equals(Shape s1, Shape s2)
 	{
-		// TODO: complete this...
+		// returns true if both shapes have the same area otherwise false
 		if (compare(s1,s2) == 0) {
 			return true;
 		} else {

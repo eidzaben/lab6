@@ -19,8 +19,11 @@ public abstract class Polygon extends Shape
      * @param id The created shape's name id.
      */
     public Polygon(String id)
-    {
+    { 
+        //parent class
         super(id);
+        
+        //initallizes an array list of doubles
         sideLengths = new ArrayList<Double>();
        
     }
@@ -33,11 +36,13 @@ public abstract class Polygon extends Shape
     @Override
 	public double getPerimeter()
     {
-    	// TODO: complete this...
+        
     	double perimeter = 0;
+    	//Loops through array list to add up the sides
     	for (int i = 0; i < sideLengths.size(); i++) {
     		perimeter += sideLengths.get(i);
     	}
+    	//returns perimeter
     	return perimeter;
     	
     }

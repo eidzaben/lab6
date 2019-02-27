@@ -18,7 +18,7 @@ public class Trapezoid extends Polygon
 
 	/**
      * The rectangle constructor. Store the side and base information and store in the sideLengths array.
-     *
+     * 
      * @param id The created shape's name id.
      * @param leftSide The left side (not parallel) of the trapezoid.
      * @param rightSide The right side (not parallel) of the trapezoid.
@@ -27,12 +27,16 @@ public class Trapezoid extends Polygon
      */
 	public Trapezoid(String id, double leftSide, double rightSide, double topBase, double bottomBase)
 	{
-		 
+	    //parent class
 		super(id);
+		
+		//set equal to instance variables
 		this.leftSide = leftSide;
 		this.rightSide = rightSide;
 		this.topBase = topBase;
 		this.bottomBase = bottomBase;
+		
+		//add lengths to an arraylist
 		sideLengths.add(leftSide);
 		sideLengths.add(rightSide);
 		sideLengths.add(topBase);
@@ -73,6 +77,7 @@ public class Trapezoid extends Polygon
 	@Override
 	public String getShapeType()
 	{
+	    //returns shape type
 		return "Trapezoid";
 	}
 

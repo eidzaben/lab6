@@ -15,7 +15,7 @@ public class ShapeSorter
 {
 	/**
 	 * List of shapes to be sorted.
-	 */
+	 */ 
 	protected ArrayList<Shape> shapes;
 
 	/**
@@ -23,6 +23,7 @@ public class ShapeSorter
 	 */
 	public ShapeSorter()
 	{
+	    //creates an arraylist
 		shapes = new ArrayList<Shape>();
 	}
 
@@ -33,7 +34,7 @@ public class ShapeSorter
 	 */
 	public void addShape(Shape s)
 	{
-		// TODO: complete this...
+		// adds shape to array list
 		shapes.add(s);
 	}
 
@@ -44,7 +45,7 @@ public class ShapeSorter
 	 */
 	public void sortShapes()
 	{
-		// TODO: complete this...
+		// sorts the array list
 		Collections.sort(shapes);
 	}
 
@@ -58,10 +59,10 @@ public class ShapeSorter
 	 */
 	public void sortShapes(Comparator<Shape> comparator)
 	{
-		// TODO: complete this...
+		// sorts the array list
 		Collections.sort(shapes, comparator);
 	
-		
+		 
 	}
 
 	/**
@@ -73,11 +74,10 @@ public class ShapeSorter
 	@Override
 	public String toString()
 	{
-		// TODO: complete this...
-		//String.format(" ", args)
+		// returns the correct formatted toString 
 		String a = "";
-		for (int i = 0; i < shapes.size(); i++) {
-			a = a.concat(shapes.get(i).toString()) + "\n";
+		for (int i = 0; i < shapes.size(); ++i) {
+			a = a.concat(shapes.get(i).toString() + " ");
 		}
 		return a;
 	}

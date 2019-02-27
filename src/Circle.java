@@ -7,7 +7,7 @@
  * @version 2019-02-18
  */
 public class Circle extends Ellipse
-{
+{ 
 	/**
 	 * Circle constructor. A circle is a specific type of ellipse for which the
 	 * major and minor axes are equivalent.
@@ -17,12 +17,12 @@ public class Circle extends Ellipse
 	 * @param id The shape's name identifier, as defined in Shape.java.
 	 * @param radius The radius of the circle.
 	 */
-	private double radius;
+	
 	public Circle(String id, double radius)
 	{
-		// TODO: complete this...
+		//Parent class
 		super(id, radius, radius);
-		this.radius = radius;
+	
 		
 	}
 
@@ -44,7 +44,8 @@ public class Circle extends Ellipse
 	@Override
 	public double getPerimeter()
 	{
-		return Math.PI * 2 * radius;
+	    //Calculates perimeter and returns it
+		return Math.PI * 2 * this.getMajorAxis();
 	}
 
 	/**
@@ -55,6 +56,7 @@ public class Circle extends Ellipse
 	@Override
 	public String getShapeType()
 	{
+	    //returns shape type
 		return "Circle";
 	}
 }

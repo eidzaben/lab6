@@ -18,18 +18,22 @@ public class ShapeSorterTest
     @Test
     public void AddShapeTest()
     {
+        //creates a shape sorter
         ShapeSorter sorter = new ShapeSorter();
-
+        
+        //creating four shapes
         Shape a = new Rectangle("test", 3, 3);
         Shape b = new EquilateralTriangle("test2", 4);
         Shape c = new Square("test3", 3);
         Shape d = new Circle("test4", 1.5);
-
+        
+        //adding shapes to array list
         sorter.addShape(a);
         sorter.addShape(b);
         sorter.addShape(c);
         sorter.addShape(d);
 
+        //Assert Equal tests
         Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(0), a);
         Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(1), b);
         Assert.assertEquals("Shapes added incorrectly...", sorter.shapes.get(2), c);
@@ -50,15 +54,17 @@ public class ShapeSorterTest
         Shape c = new Square("test3", 10); // 100, 40
         Shape d = new Circle("test4", 5); // 78.4, 31.42
 
-        // Adding to arrayList
+        // Adding shapes to sort
         sort.addShape(a);
         sort.addShape(b);
         sort.addShape(c);
         sort.addShape(d);
+        
         // Sorting the order
         sort.sortShapes();
 
-        Assert.assertEquals("Order Incorrect", b, sort.shapes.get(0));
+        //Assert Equal tests
+        Assert.assertEquals("Order Incorrect", b, sort.shapes.get(0)); 
         Assert.assertEquals("Order Incorrect", d, sort.shapes.get(1));
         Assert.assertEquals("Order Incorrect", c, sort.shapes.get(2));
         Assert.assertEquals("Order Incorrect", a, sort.shapes.get(3));
@@ -76,15 +82,19 @@ public class ShapeSorterTest
 
         Shape a = new Rectangle("test", 20, 5); // 100, 50
         Shape b = new EquilateralTriangle("test2", 2); // 1.73, 6
-        Shape c = new Square("test3", 10); // 100, 40
+        Shape c = new Square("test3", 9); // 81, 40
         Shape d = new Circle("test4", 5); // 78.4, 31.42
-
+      
+        //adds shapes to sort
         sort.addShape(a);
         sort.addShape(b);
         sort.addShape(c);
         sort.addShape(d);
+        
+        //sorts the shapes by area
         sort.sortShapes(new ShapeAreaComparator());
 
+        //Assert Equal tests
         Assert.assertEquals("Order Incorrect", b, sort.shapes.get(0));
         Assert.assertEquals("Order Incorrect", d, sort.shapes.get(1));
         Assert.assertEquals("Order Incorrect", c, sort.shapes.get(2));
@@ -105,13 +115,17 @@ public class ShapeSorterTest
         Shape b = new EquilateralTriangle("test2", 2); // 1.73, 6
         Shape c = new Square("test3", 10); // 100, 40
         Shape d = new Circle("test4", 5); // 78.4, 31.42
-
+        
+        //adding shapes to sort
         sort.addShape(a);
         sort.addShape(b);
-        sort.addShape(c);
+        sort.addShape(c); 
         sort.addShape(d);
+        
+        //sorts the shapes by perimeter
         sort.sortShapes(new ShapePerimeterComparator());
 
+        //Assert Equal tests
         Assert.assertEquals("Order Incorrect", b, sort.shapes.get(0));
         Assert.assertEquals("Order Incorrect", d, sort.shapes.get(1));
         Assert.assertEquals("Order Incorrect", c, sort.shapes.get(2));
@@ -125,15 +139,20 @@ public class ShapeSorterTest
     @Test
     public void ToStringTest()
     {
+       //creating a shape sorter
     ShapeSorter sort = new ShapeSorter();
     
+    //creating two shapes
     Shape a = new Rectangle("test", 20, 5); // 100, 50
     Shape b = new EquilateralTriangle("test2", 2); // 1.73, 6
     
+    //adding the shapes
     sort.addShape(a);
     sort.addShape(b);
     
-    String expected = sort.shapes.get(0).toString() + "\n" + sort.shapes.get(1).toString() + "\n";
+    //What it should be
+    String expected = sort.shapes.get(0).toString() + " " + sort.shapes.get(1).toString() + " ";
+    //Assert Equal tests
     Assert.assertEquals("ToString incorrect", expected, sort.toString());
     
         
